@@ -66,11 +66,18 @@
 <body>
     <h2>Digite o número do processo<br>Projudi-TJGO</h2>
     <div id="container">
-        <input type="text" id="processo" maxlength="26" onblur="this.focus()" placeholder="_______-__.____._.__.____" autofocus>
+        <input type="text" id="processo" maxlength="26" placeholder="_______-__.____._.__.____" autofocus>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            //força o foco contínuo no campo
+                    setInterval(() => {
+                let input = document.getElementById("processo");
+                if (document.activeElement !== input) {
+                    input.focus();
+                }
+            }, 100);
             document.addEventListener("keydown", function(event) {
                 if (event.key === "Tab") {
                     event.preventDefault(); // Impede a navegação padrão do Tab
