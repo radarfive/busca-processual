@@ -138,7 +138,7 @@
                 if (event.key === "Enter") {
                     let numeroProcesso = this.value.replace(/[_\.]+$/g, "").trim();
                     if (numeroProcesso.length >= 5) {
-                        let url = `https://projudi.tjgo.jus.br/BuscaProcesso?PaginaAtual=2&ProcessoNumero=${numeroProcesso}&ProcessoStatus=&Id_ProcessoStatus=null&ProcessoStatusCodigo=null&Serventia=&Id_Serventia=null`;
+                        let url = `https://projudi.tjgo.jus.br/BuscaProcesso?PaginaAtual=2&ProcessoNumero=${numeroProcesso}`;
                         window.open(url, "_blank");
                         this.value = "";
                     }
